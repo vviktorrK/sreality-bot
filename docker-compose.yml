@@ -5,10 +5,6 @@ services:
         build: .
         ports:
             - "8080:5000"
-        links:
-            - postgres_db
-        environment:
-            DATABASE_HOST: postgres_db
 
     postgres_db:
         image: postgres
