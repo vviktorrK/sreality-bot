@@ -8,5 +8,6 @@ git clone https://github.com/coviktor/sreality-bot.git
 ```
 and run
 ```docker
+cd sreality-bot
 docker compose up
 ```
