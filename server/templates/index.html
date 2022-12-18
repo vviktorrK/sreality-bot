@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Apartments For Sale</title>
+</head>
+<body>
+
+{% for apartment in apartments %}
+    <div class="text"><pre>{{apartment['title']}}</pre></div>
+    <img src="{{apartment['image_url']}}" alt="{{apartment['title']}}" width="400">
+{% endfor %}
+
+</body>
+</html>

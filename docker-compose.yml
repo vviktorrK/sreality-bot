@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+    scraper:
+        build: .
+        ports:
+            - "8080:5000"
+        links:
+            - postgres_db
+        environment:
+            DATABASE_HOST: postgres_db
+
+    postgres_db:
+        image: postgres
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=password
