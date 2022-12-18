@@ -15,7 +15,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN playwright install --with-deps chromium
 
 COPY . .
-RUN chmod u+x bin/wait-for-it.sh
-RUN chmod u+x bin/run.sh
+RUN chmod u+x scripts/wait-for-it.sh
+RUN chmod u+x scripts/run.sh
 
-CMD ["./bin/wait-for-it.sh", "postgres_db:5432", "--", "./bin/run.sh"]
+CMD ["./scripts/wait-for-it.sh", "postgres_db:5432", "--", "./scripts/run.sh"]
